@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ভাষা শহীদ বিদ্যানিকেতন</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-700 to-blue-900 text-white sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="bsbn.png" alt="স্কুল লোগো" class="h-12 w-12 rounded-lg object-cover">
+        <div>
+          <div class="font-extrabold">ভাষা শহীদ বিদ্যানিকেতন</div>
+          <div class="text-xs text-white/90">শিক্ষা, চরিত্র, সাফল্য</div>
+        </div>
+      </div>
+      <nav class="hidden md:flex gap-5 items-center">
+        <a href="#home" class="font-semibold text-white hover:underline">হোম</a>
+        <a href="#about" class="font-semibold text-white hover:underline">আমরা</a>
+        <a href="#admission" class="font-semibold text-white hover:underline">ভর্তি</a>
+        <a href="#gallery" class="font-semibold text-white hover:underline">শিক্ষকবৃন্দ</a>
+        <a href="#contact" class="font-semibold text-white hover:underline">যোগাযোগ</a>
+        <a href="#admission" class="bg-white text-blue-700 font-bold px-3 py-1 rounded-md">ভর্তির আবেদন</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="menuBtn" aria-label="menu" class="text-white text-2xl">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- switf pic -->
+   <section class="flex flex-col items-center text-center justify-center py-10" >
+      <div class="relative w-[700px] h-56 overflow-hidden rounded-xl shadow-2xl">
+    <!-- সব ছবি এখানে থাকবে -->
+    <img src="./school.png" class="absolute w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+    <img src="./bsbn.png" class="absolute w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+    <img src="./headsir.png" class="absolute w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll("img");
+    let current = 0;
+
+    function showNextSlide() {
+      slides[current].classList.remove("opacity-100");
+      slides[current].classList.add("opacity-0");
+
+      current = (current + 1) % slides.length;
+
+      slides[current].classList.remove("opacity-0");
+      slides[current].classList.add("opacity-100");
+    }
+
+    // প্রতি 3 সেকেন্ডে ছবি পরিবর্তন হবে
+    setInterval(showNextSlide, 3000);
+  </script>
+   </section>
+
+  <!-- Hero Section -->
+  <main>
+    <section id="home" class="py-14 bg-gradient-to-b from-white/10 to-transparent">
+      <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-6 items-center">
+        <div>
+          <h1 class="text-2xl md:text-3xl font-bold mb-3">আপনার স্কুলের পরিচয় — মানসম্মত শিক্ষা, উজ্জ্বল ভবিষ্যৎ</h1>
+          <p class="text-gray-500 mb-4">আমরা লক্ষ্য করি প্রতিটি শিক্ষার্থী আত্মবিশ্বাসী ও সৃজনশীল হয়ে উঠুক। নতুন একাডেমিক বছর শুরু হয়েছে — এখনই ভর্তির জন্য আবেদন করুন।</p>
+          <div class="flex flex-wrap gap-3 mb-4">
+            <div class="bg-white shadow-md px-3 py-2 rounded-lg">আধুনিক শ্রেণিকক্ষ</div>
+            <div class="bg-white shadow-md px-3 py-2 rounded-lg">প্রশিক্ষিত শিক্ষক</div>
+            <div class="bg-white shadow-md px-3 py-2 rounded-lg">খেলার মাঠ ও লাইব্রেরী</div>
+          </div>
+          <a href="#admission" class="bg-blue-700 text-white font-bold px-4 py-2 rounded-lg">এখনই আবেদন</a>
+        </div>
+        <div>
+          <div class="bg-white p-5 rounded-xl shadow-md">
+            <h3 class="text-lg font-semibold mb-2">ভর্তির সময়সূচী</h3>
+            <p class="text-gray-500 mb-2">অফলাইন ও অনলাইন আবেদন উভয়েই গ্রহণ করা হবে।</p>
+            <ul class="list-disc list-inside text-gray-500">
+              <li>নিবন্ধন: ১ জানুয়ারি - ৩০ জানুয়ারি</li>
+              <li>পরীক্ষা: ৫ ফেব্রুয়ারি</li>
+              <li>ফলাফল: ১৫ ফেব্রুয়ারি</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-7">
+      <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row gap-6 items-center">
+        <div class="md:w-1/2">
+          <h2 class="text-xl font-semibold mb-2">আমরা কারা</h2>
+          <p class="text-gray-500 mb-4">আমাদের ভাষা শহীদ বিদ্যানিকেতন চরমিরকামারী নামে অজো পাড়া গাঁয়ে আমার বাবা) লুৎফুর রহমান সাহেব এর জন্ম। (শিক্ষার আলো জ্বালাবার মত কোন বিদ্যালয় ছিল না আবার বিজলী বাতিও ছিল না। সেখান থেকে অদম্য ইচ্ছাশক্তি বলে স্কুল কলেজ জীবন শেষ করে ঢাকা বিশ্ববিদ্যালয় থেকে এম এ ডিগ্রী নিয়ে ফিরে আসেন ঈশ্বরদীতে। কর্মজীবনে প্রবেশ করেন সাঁড়া মাড়োয়ারী স্কুলে প্রধান শিক্ষক পদে। আমার মা ঈশ্বরদী গার্লস স্কুলের প্রধান শিক্ষক ছিলেন। অবসর জীবনে বাবা বিদ্যালয় প্রতিষ্ঠার জন্য ঢাকা থেকে প্রতিমাসে বাড়ী আসতেন। শেষ পর্যন্ত সকলের সহযোগিতায় ভাষা শহীদ বিদ্যানিকেতন প্রতিষ্ঠা করেন। মাকেও দেখেছি স্কুল নিয়ে অনেক ভাবতে । অবসর জীবনে উভয়ের ভাবনাই ছিল বিদ্যালয়ের সমৃদ্ধি। মা অসুস্থ থাকলেও বিদ্যালয় নিয়ে ভাবতে দেখেছি সারাক্ষন। সৎ , সাহসী, দক্ষ মানুষের সন্তান হতে পেরে আমি গর্বিত। তাদের সমস্ত চিন্তা চেতনাই ছিল প্রতিষ্ঠানকে ঘিরে। তারা ছিলেন আদর্শ শিক্ষক, দক্ষ প্রশাসক দেশপ্রেমিক, সর্বোপরি আদর্শ পিতা মাতা। যুগে যুগে তাঁরা অমর হয়ে থাকবে এই প্রতিষ্ঠানের সমৃদ্ধির মাধ্যমে। তার সন্তান হিসেবে এটাই আমার প্রত্যাশা।</p>
+          <div class="flex flex-wrap gap-2">
+            <div class="bg-white shadow-md px-3 py-2 rounded-lg">শিক্ষা নীতি</div>
+            <!-- <div class="bg-white shadow-md px-3 py-2 rounded-lg">শিক্ষকবৃন্দ</div> -->
+            <a href="#gallery" class="bg-white shadow-md px-3 py-2 rounded-lg">শিক্ষকবৃন্দ</a>
+
+            <div class="bg-white shadow-md px-3 py-2 rounded-lg">ছাত্র উন্নয়ন</div>
+          </div>
+        </div>
+        <img src="school.png" alt="স্কুল ছবি" class="md:w-1/2 rounded-xl object-cover">
+      </div>
+    </section>
+
+    <!-- Admission Form -->
+    <section id="admission" class="py-7">
+      <div class="max-w-3xl mx-auto px-5">
+        <h2 class="text-xl font-semibold mb-4">ভর্তি ফর্ম</h2>
+        <div class="bg-white shadow-md p-6 rounded-xl">
+          <form id="admissionForm" class="space-y-4">
+            <div>
+              <label class="block font-semibold mb-1">শিশুর নাম</label>
+              <input type="text" name="name" required placeholder="পূর্ণ নাম" class="w-full border border-gray-300 rounded-md p-2">
+            </div>
+            <div>
+              <label class="block font-semibold mb-1">জন্ম তারিখ</label>
+              <input type="date" name="dob" required class="w-full border border-gray-300 rounded-md p-2">
+            </div>
+            <div>
+              <label class="block font-semibold mb-1">গ্রেড/শ্রেণি</label>
+              <select name="grade" required class="w-full border border-gray-300 rounded-md p-2">
+                <option value="">বেছে নিন</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-semibold mb-1">মাতার নাম</label>
+              <input type="text" name="mother" class="w-full border border-gray-300 rounded-md p-2">
+            </div>
+            <div>
+              <label class="block font-semibold mb-1">পিতার নাম</label>
+              <input type="text" name="father" class="w-full border border-gray-300 rounded-md p-2">
+            </div>
+            <div>
+              <label class="block font-semibold mb-1">যোগাযোগ নম্বর</label>
+              <input type="tel" name="phone" placeholder="01xxxxxxxxx" required class="w-full border border-gray-300 rounded-md p-2">
+            </div>
+            <div>
+              <label class="block font-semibold mb-1">মন্তব্য / অতিরিক্ত তথ্য</label>
+              <textarea name="note" rows="4" placeholder="আপনি কি জানাতে চান..." class="w-full border border-gray-300 rounded-md p-2"></textarea>
+            </div>
+            <button type="submit" class="bg-blue-700 text-white font-bold px-4 py-2 rounded-lg">জমা দিন</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery / Teacher Cards -->
+    <section id="gallery" class="py-7">
+      <div class="max-w-6xl mx-auto px-5">
+        <h2 class="text-xl font-semibold mb-4">শিক্ষকবৃন্দ</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <!-- Teacher Card 1 -->
+          <div class="bg-white shadow-md rounded-xl p-4 text-center">
+            <img src="./techer/1st.png" alt="Teacher Photo" class="w-28 h-28 object-cover rounded-full border-4 border-blue-100 mx-auto mb-2">
+            <div class="font-semibold">📘 ইন্ডেক্স নং: 552505</div>
+            <div class="text-gray-500 text-sm">🏫 বিভাগ: Bangla</div>
+            <div class="text-gray-500 text-sm">👨‍🏫 পদবী: সিনিয়র শিক্ষক</div>
+            <div class="text-gray-500 text-sm">📚 বিষয়: বাংলা</div>
+            <div class="font-semibold mt-1">📞 মোবাইল: 01733843620</div>
+          </div>
+          <!-- Teacher Card 2 -->
+          <div class="bg-white shadow-md rounded-xl p-4 text-center">
+            <img src="https://via.placeholder.com/240x240.png?text=Sir+2" alt="Teacher Photo" class="w-28 h-28 object-cover rounded-full border-4 border-blue-100 mx-auto mb-2">
+            <div class="font-semibold">📘 ইন্ডেক্স নং: 550431</div>
+            <div class="text-gray-500 text-sm">🏫 বিভাগ: সামাজিক বিজ্ঞান</div>
+            <div class="text-gray-500 text-sm">👨‍🏫 পদবী: সিনিয়র শিক্ষক</div>
+            <div class="text-gray-500 text-sm">📚 বিষয়: সামাজিক বিজ্ঞান</div>
+            <div class="font-semibold mt-1">📞 মোবাইল: 01731245237</div>
+          </div>
+          <!-- Teacher Card 3 -->
+          <div class="bg-white shadow-md rounded-xl p-4 text-center">
+            <img src="https://via.placeholder.com/240x240.png?text=Sir+3" alt="Teacher Photo" class="w-28 h-28 object-cover rounded-full border-4 border-blue-100 mx-auto mb-2">
+            <div class="font-semibold">📘 ইন্ডেক্স নং: 550431</div>
+            <div class="text-gray-500 text-sm">🏫 বিভাগ: সামাজিক বিজ্ঞান</div>
+            <div class="text-gray-500 text-sm">👨‍🏫 পদবী: সিনিয়র শিক্ষক</div>
+            <div class="text-gray-500 text-sm">📚 বিষয়: সামাজিক বিজ্ঞান</div>
+            <div class="font-semibold mt-1">📞 মোবাইল: 01731245237</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="py-7" style="position: relative; width: 100%; padding-bottom: 56.25%;">
+  <iframe src="https://www.youtube.com/embed/TyFPNNqmLc4"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+    <h1 class="flex flex-col justify-center text-center items-center text-4xl font-bold mt-10 ">Help line</h1>
+    <section class="flex flex-col justify-center items-center py-10">
+      <img src="sarvices.png" alt="not found">
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-7">
+  <h1 class="w-full text-center px-4 py-6 sm:py-8 hover:text-red-500 md:py-10 text-2xl sm:text-3xl md:text-4xl font-bold leading-tight hover:text-red-500 border border-2px bg-blue-700 rounded-full">
+  আমাদের সাথে যোগাযোগ করুন।
+</h1>
+      <div class="max-w-6xl mx-auto px-5 flex flex-wrap gap-5">
+        <div class="flex-1 min-w-[260px] bg-white shadow-md p-5 rounded-xl">
+          <p class="mb-2"><strong>ঠিকানা:</strong> আপনার স্কুলের ঠিকানা এখানে</p>
+          <p class="mb-2"><strong>ফোন:</strong> ০১২৩৪-৫৬৭৮৯</p>
+          <p class="mb-2"><strong>ইমেইল:</strong> info@school.edu.bd</p>
+        </div>
+        <div class="flex-1 min-w-[260px] bg-white shadow-md p-5 rounded-xl">
+          <form id="contactForm" class="space-y-3">
+            <div>
+              <label class="block font-semibold mb-1">আপনার নাম</label>
+              <input name="name" required class="w-full border border-gray-300 rounded-md p-2">
+            </div>
+            <div>
+              <label class="block font-semibold mb-1">ইমেইল</label>
+              <input name="email" type="email" required class="w-full border border-gray-300 rounded-md p-2">
+            </div>
+            <div>
+              <label class="block font-semibold mb-1">বার্তা</label>
+              <textarea name="message" rows="4" required class="w-full border border-gray-300 rounded-md p-2"></textarea>
+            </div>
+            <button type="submit" class="bg-blue-700 text-white font-bold px-4 py-2 rounded-lg">পাঠান</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+<!-- Google Map Embed Code -->
+<style>
+/* Blinking cursor */
+.cursor {
+  display: inline-block;
+  width: 6px;
+  height: 28px;
+  background: white;
+  margin-left: 4px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Fade-in effect */
+.fade {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+</style>
+
+<h1 id="typingText" class="flex justify-center gap-4 py-5 bg-blue-700 text-white text-4xl font-bold mt-10"></h1>
+
+<script>
+const lines = ["প্রতিষ্ঠানের", "ম্যাপ",
+  "আমাদের ক্যাম্পাস",
+  "আমাদের ঠিকানা"];
+
+let wordIndex = 0;
+let charIndex = 0;
+
+function typeWord() {
+  const typingText = document.getElementById("typingText");
+
+  if (wordIndex < lines.length) {
+
+    let html = "";
+
+    // Already completed words (fade effect)
+    for (let i = 0; i < wordIndex; i++) {
+      html += `<span class="fade">${lines[i]}</span> `;
+    }
+
+    // Current typing word
+    html += `<span>${lines[wordIndex].substring(0, charIndex)}<span class="cursor"></span></span>`;
+
+    typingText.innerHTML = html;
+
+    charIndex++;
+
+    if (charIndex <= lines[wordIndex].length) {
+      setTimeout(typeWord, 120);
+    } else {
+      charIndex = 0;
+      wordIndex++;
+      setTimeout(typeWord, 400);
+    }
+  }
+}
+
+typeWord();
+</script>
+
+<iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d422.0!2d89.080821!3d24.1013129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fea02c239d7b4d%3A0x123456789abcdef!2z44CSMjQgxJAwNTAzNiwgQmFuZ2xhZGVzaA!5e0!3m2!1sen!2sbd!4v1700000000000" 
+  width="600" 
+  height="450" 
+  style="border:0; width:100%; height:400px;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-5">
+    <div class="max-w-6xl mx-auto px-5 flex flex-wrap justify-between items-center">
+      <div>© <strong>ভাষা শহীদ বিদ্যানিকেতন </strong> - সকল স্বত্ব সংরক্ষিত</div>
+      <div class="text-gray-400 text-xs">Prepared with ❤️ by তুসার বিশ্বাস</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    if(menuBtn){
+      menuBtn.addEventListener('click', ()=>{
+        const links = document.querySelector('nav');
+        links.classList.toggle('hidden');
+      });
+    }
+
+    // Admission form submit demo
+    document.getElementById('admissionForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('আপনার আবেদন গ্রহণ করা হয়েছে — ধন্যবাদ!');
+      this.reset();
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('বার্তা পাঠানো হয়েছে — আমরা দ্রুত যোগাযোগ করবো।');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
